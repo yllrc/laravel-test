@@ -16,7 +16,7 @@ class SlackController extends Controller
 
     public function send(Request $request)
     {
-        Notification::route('slack', 'https://hooks.slack.com/services/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')
+        Notification::route('slack', 'https://hooks.slack.com/services/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')
             ->notify(new SlackTest($request->text));
         return;
     }
