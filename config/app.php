@@ -213,4 +213,9 @@ return [
         'Pusher' => Pusher\Pusher::class,
     ])->toArray(),
 
+    /**
+     * 自定義
+     */
+    'slack_webhook_url' => env('SLACK_WEBHOOK_URL'),
+
 ];
