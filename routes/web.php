@@ -5,6 +5,8 @@ use App\Http\Controllers\SlackController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\PusherController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RecordController;
+use App\Http\Controllers\QuizController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 
 /*
@@ -40,5 +42,8 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/event-send', [EventController::class, 'send']);
 
     Route::get('/pusher-test', [PusherController::class, 'test']);
+
+    Route::get('/dashboard', [RecordController::class, 'record']);
+    Route::get('/quiz', [QuizController::class, 'quiz']);
 });
 
